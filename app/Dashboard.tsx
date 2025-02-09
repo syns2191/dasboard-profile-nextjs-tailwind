@@ -5,12 +5,8 @@ import { BellIconOutline } from './components/icons/Bell';
 import { CircleStackIcon } from './components/icons/CircleStack';
 import { HomeIcon } from './components/icons/Home';
 import { EllipsisHorizontalIcon, EllipsisVerticalIcon } from './components/icons/Elipsis';
-import { ShieldCheckIcon } from './components/icons/Check';
-import { CubeTransparentIcon } from './components/icons/Cube';
-import { UserCircleIcon } from './components/icons/User';
-import { DocumentIcon } from './components/icons/Document';
-import { InformationCircleIcon } from './components/icons/Help';
 import { MagnifyingGlassIcon } from './components/icons/Search';
+import Container from './libs/Container';
 
 export default function DashboardPage() {
   const months = [
@@ -73,34 +69,8 @@ export default function DashboardPage() {
     }
   ]
   return (
-    <div className="flex min-h-[900px] bg-stone-50 rounded-3xl shadow-lg py-3 pr-3 pl-0">
-      <div className="flex w-1/6 pt-5 flex-col">
-        <div className="w-full flex mx-auto h-fit mb-10">
-          <p className="text-lg text-violet-700 font-bold mx-auto">OpenCart</p>
-        </div>
-        <div className="flex w-full">
-          <ul className="mx-auto">
-            <li className="flex py-3">
-              <CubeTransparentIcon className="h-6 w-6 text-violet-700 mr-3" />
-              <span className="text-sm font-bold text-violet-700 my-auto">Dashboard</span>
-            </li>
-            <li className="flex py-3">
-              <UserCircleIcon className="h-6 w-6 text-violet-700 mr-3" />
-              <span className="text-sm font-bold text-violet-700 my-auto">Profile</span>
-            </li>
-            <li className="flex py-3">
-              <DocumentIcon className="h-6 w-6 text-violet-700 mr-3" />
-              <span className="text-sm font-bold text-violet-700 y-auto">Statement</span>
-            </li>
-            <li className="flex py-3">
-              <InformationCircleIcon className="h-6 w-6 text-violet-700 mr-3" />
-              <span className="text-sm font-bold text-violet-700 my-auto">Help</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="w-5/6 mx-auto inset-shadow-sm shadow-sm flex-col gap-8 p-8 bg-gray-100 rounded-2xl">
-        <div className="w-full mb-10 flex justify-end">
+    <Container>
+      <div className="w-full mb-10 flex justify-end">
           <div className="w-full max-w-md flex justify-end">
             <div className="flex relative items-center">
               <input
@@ -223,57 +193,7 @@ export default function DashboardPage() {
         </div>
         <div className="flex w-1/2">
         </div>
-      </div>
-    </div>
-  );
-}
 
-const experiences = [
-  {
-    title: 'Senior Product Designer',
-    company: 'Tech Corp Inc.',
-    duration: '2019 - Present',
-    description: 'Leading design initiatives for enterprise SaaS products...'
-  },
-  {
-    title: 'Product Designer',
-    company: 'Digital Innovations LLC',
-    duration: '2016 - 2019',
-    description: 'Designed mobile applications for various clients...'
-  },
-  // Add more experiences
-];
-
-// Icons
-function CalendarIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-    </svg>
-  );
-}
-
-function PinIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-    </svg>
-  );
-}
-
-function EmailIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-    </svg>
+    </Container>
   );
 }
